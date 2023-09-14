@@ -160,6 +160,27 @@ const users = [
 
 // ПОДСКАЗКА, Таблица состоит из строк (tr) и ячеек (td) внутри этих строк. Строк должно создаваться столько, сколько объектов внутри массива, и их количество может быть любым.
 
+const table = document.querySelector('table');
+console.log(table);
+ 
+
+for (let item of users){
+   let tr = document.createElement('tr');
+
+     let tdName = document.createElement('td');
+   tdName.textContent = item.name;
+   tdName.style.color = 'red';
+   tr.append(tdName);
+   let tdAge = document.createElement('td'); 
+   tdAge.textContent = item.age;
+   tdAge.style.color = 'blue';
+   tr.appendChild(tdAge);
+   
+   document.querySelector('table').appendChild(tr);
+}
+
+document.body.append(table);
+
 
 
 
