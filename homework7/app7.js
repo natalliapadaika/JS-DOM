@@ -29,13 +29,13 @@ console.log(`на компьютере с ОС ${navigator.platform} с помо
 
 // 2.2. Поменять имена в списке выше на числа от 0 по порядку (0, 1, 2 и т.д.)
 
-document.querySelectorAll('li').forEach((item, index) =>{
-    console.log(item);
+document.querySelectorAll('li').forEach(item =>{
+     console.log(item.textContent);
  });
+
 
 document.querySelectorAll('li').forEach((item, index) =>{
   item.innerText = index;
-    console.log(item);
 });
 
 // Задание 3
@@ -63,9 +63,9 @@ document.querySelector('main').append(paragraph);
 
 
 const getnewTeg = ((nameTeg, newColor, text) => {
-   const newTeg = document.createElement(`${nameTeg}`);
-   newTeg.style.color = `${newColor}`;
-   newTeg.innerText = `${text}`;
+   const newTeg = document.createElement(nameTeg);
+   newTeg.style.color = newColor;
+   newTeg.innerText = text;
    return newTeg;
 
 //    return document.body.appendChild(newTeg);
@@ -84,28 +84,16 @@ console.log(h2);
 
 document.body.appendChild(a);
 document.body.append(p);
-document.body.append(h2); //не полностью уверена, что вывод в консоль и отправку на страницу нужно сделать вне функции. Но насколько читала вроде бы так. 
-// если функция дожна выводить в консоль и отправлять, то так:
-
-const getnewTeg1 = ((nameTeg, newColor, text) => {
-   const newTeg = document.createElement(`${nameTeg}`);
-   newTeg.style.color = `${newColor}`;
-   newTeg.innerText = `${text}`;
-   console.log(newTeg);
-   return document.body.appendChild(newTeg);
-   
-});
-
-getnewTeg1('h3', 'orange', 'Title'); // ??? вопрос возник такой, не смогла сама никак придумать, как избавиться от '' при вызове функции, понимаю что для JS тут должно быть string но как это ему объявить правильно ?????
+document.body.append(h2); 
 
 // Задание 6
 // Вставить в страницу (в html документ) тег <select>. С помощью js (в цикле) добавить в этот select опции (option) под годы от 1960 по 2020.
 
-
+const select = document.querySelector('main select');
 for (let i=1960; i <=2020; i++){
    const options = document.createElement('option');
-   options.textContent = `${i}`;
-document.querySelector('main select').append(options);
+   options.textContent = i;
+select.append(options);
 };
 
 // Задание 8
@@ -129,7 +117,6 @@ let linksArr = ['https://www.amazon.com/', 'https://www.youtube.com/', 'https://
 const div = document.createElement('div');
 div.style.background = 'violet';
 div.style.padding = '35px 25px 35px 25px';
-document.body.append(div);
 
 linksArr.forEach(item => {
    const teg = document.createElement('a');
@@ -137,8 +124,9 @@ linksArr.forEach(item => {
    teg.href = item;
    teg.target ="_blank";
    teg.style.marginRight = '15px';
-   document.querySelector('div').append(teg);
+   div.append(teg);
 });
+document.body.append(div);
 
 // Задание 9*
 
@@ -176,11 +164,20 @@ for (let item of users){
    tdAge.style.color = 'blue';
    tr.appendChild(tdAge);
    
-   document.querySelector('table').appendChild(tr);
-}
+   table.appendChild(tr);
+};
 
-document.body.append(table);
+// Задание 10
 
+// Есть верстка: https://teenscool1.notion.site...
+
+// С помощью JavaScript:
+
+// 1) Найти в коде список ul и добавить ему класс “list”.
+
+// 2) На li через один (начиная с самого первого) установить класс “item”
+
+// 3) На все ссылки в примере установить класс “custom-link”
 
 
 
