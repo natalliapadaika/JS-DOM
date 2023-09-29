@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+  
+    // text-align: center;
+    display: flex;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    align-items: center;
+    // align-content: center;
+    justify-content: center;
+    // background-image: url(../img/hamel.jpg);
+    background-size: cover;
+    background-position: center;
+    // background-repeat: no-repeat;
+    transition: background-image .5s;
+    // &.back-gekon{
+    //     background-image: url(../img/gekon.jpg);
+    // }
+    // // &.back-ham{
+      
+    // // }
+    // &.back-rep{
+    //     background-image: url(../img/reptilia.jpg);
+    // }
+
+}
+.wrapper{
+  max-width: 70%;
+  padding: 20px;
+  background: rgba(128, 128, 128, 0.511);
+    display: flex;
+   gap: 30px;
+   opacity: 0.8;
+   justify-content: space-around;
+ 
+
+    img{
+      width: 30%;
+      transition: .5s;
+      cursor: pointer;
+        object-fit: cover;
+     background-position: center;
+    }
+   img:hover, .active{
+      transform: scale(1.1);
+     }
+}

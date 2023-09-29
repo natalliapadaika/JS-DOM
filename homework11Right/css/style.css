@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s;
+}
+
+.wrapper {
+  max-width: 70%;
+  padding: 20px;
+  background: rgba(128, 128, 128, 0.511);
+  display: flex;
+  gap: 30px;
+  opacity: 0.8;
+  justify-content: space-around;
+}
+.wrapper img {
+  width: 30%;
+  transition: 0.5s;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+.wrapper img:hover, .wrapper .active {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
