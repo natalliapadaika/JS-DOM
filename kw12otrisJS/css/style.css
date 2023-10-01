@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.info-item {
+  display: none;
+  padding: 20px 0px;
+}
+.info-item h2 {
+  margin-bottom: 10px;
+}
+
+.info-item.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */
