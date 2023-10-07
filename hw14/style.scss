@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-left: 20px;
+}
+
+div{
+    margin: 20px auto;
+}
+#clock{
+    background: gray;
+    padding: 10px 15px;
+    max-width: 20%;
+    margin: 10px auto;
+    text-align: center;
+    
+    font-size: 18px;
+    color: rgb(80, 9, 116);
+    border: 2px rgb(80, 9, 116) solid;
+
+}
+
+ul li{
+    list-style-type: circle;
+}
