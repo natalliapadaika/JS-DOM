@@ -28,17 +28,9 @@ getMessage(arr);
 
 // Вам нужно будет каждую секунду запускать функцию, которая будет создавать новый объект Date и забирать из него необходимую информацию.
 
-let now = new Date();
-// console.log(now);
-
-let hour = now.getHours();
-let minute = now.getMinutes();
-let second = now.getSeconds();
-
-console.log(hour + ': ' + minute +': ' + second);
 
 const clock = document.querySelector('#clock');
-console.log(clock);
+// console.log(clock);
 
 
 const getTimes = () =>{
