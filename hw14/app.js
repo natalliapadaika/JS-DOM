@@ -22,6 +22,23 @@ if (i < 5){
 
 getMessage(arr);
 
+// над этим заданием сидела долго, сначала было понятнее самой решать через массив, попозже в учебнике по похожей задаче адаптировала под нужную.......
+
+const getMessageTwo = (from, to) => {
+    
+    let n = from;
+    
+    let timerMessage = setInterval(() => {
+     console.log(`сообщение номер ${n}`);
+     if (n == to){
+        clearInterval(timerMessage);
+     }
+     n++;
+    }, 2000);
+} 
+
+getMessageTwo(1, 5);
+
 // Задание 2
 
 // Сделать виджет - цифровые часы, оформить по желанию.
