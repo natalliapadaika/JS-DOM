@@ -31,30 +31,8 @@ const renderCard = (name, region, population, lang, many, flag) => {
 fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then(countrys => {
-  console.log(countrys);
+ 
         
-  
-      //  countrys.forEach((el, i) => {
-   
-      //     const name = el.name.official;         
-      //     const region = el.region;
-      //     const population = el.population;
-      //     const flag = el.flags.svg;
-      //     if(el.languages){
-      //        lang = Object.values(el.languages).join(', ');
-      //     } else {
-      //        lang = '-';
-      //     };
-           
-      //     if(el.currencies){
-      //     const currencies = Object.values(el.currencies);
-      //     many = currencies.map(item =>item.name + ' ' + item.symbol).join(', ')}
-      //     else {
-      //       many = '-';
-      //     }
-
-
-
 for (let i = 0; i < countrys.length; i+=10){
 
 const name = countrys[i].name.official;
