@@ -1,7 +1,7 @@
 
 const row = document.querySelector('.row');
 
-const renderCard = (name, region, population, lang, currencName, currencSymbol, flag) => {
+const renderCard = (name, region, population, lang, many, flag) => {
   row.insertAdjacentHTML('beforeend', 
   `       <div class="col">
   <div class="card h-100">
@@ -18,7 +18,7 @@ const renderCard = (name, region, population, lang, currencName, currencSymbol, 
      ${lang}
       </p>
     <p class="card-text"> &#128176 
-    ${currencName}, ${currencSymbol}
+    ${many}
       </p>
     </div>
   </div>
@@ -28,38 +28,49 @@ const renderCard = (name, region, population, lang, currencName, currencSymbol, 
 }
 
 
-
 fetch('https://restcountries.com/v3.1/all')
       .then(response => response.json())
       .then(countrys => {
-  
+  console.log(countrys);
         
-       countrys.forEach((el) => {
-          const name = el.name.official;
-          const region = el.region;
-          const population = el.population;
-          if(el.languages){
-            const lang = Object.values(el.languages);
-          // console.log(lang);
-           const flag = el.flags.svg;
-          if(el.currencies){
+  
+      //  countrys.forEach((el, i) => {
+   
+      //     const name = el.name.official;         
+      //     const region = el.region;
+      //     const population = el.population;
+      //     const flag = el.flags.svg;
+      //     if(el.languages){
+      //        lang = Object.values(el.languages).join(', ');
+      //     } else {
+      //        lang = '-';
+      //     };
+           
+      //     if(el.currencies){
+      //     const currencies = Object.values(el.currencies);
+      //     many = currencies.map(item =>item.name + ' ' + item.symbol).join(', ')}
+      //     else {
+      //       many = '-';
+      //     }
 
-          const currencies = Object.values(el.currencies);
-          currencies.forEach((el, i) => {
-          const currencName = currencies[i].name;
-          const currencSymbol = currencies[i].symbol;
-    
-      renderCard(name, region, population, lang, currencName, currencSymbol, flag);
+
+
+for (let i = 0; i < countrys.length; i+=10){
+
+const name = countrys[i].name.official;
+const region = countrys[i].region;
+const population = countrys[i].population;
+const flag = countrys[i].flags.svg;
+const lang = countrys[i].languages? Object.values(countrys[i].languages).join(', ') : '-';
+
+const many = countrys[i].currencies? Object.values(countrys[i].currencies).map(item =>item.name + ' ' + item.symbol).join(', ') : '-';
+       
+
+  renderCard(name, region, population, lang, many,  flag);
+}
+      
       }); 
-    }
-  }
-      
-
-      
-        });
-
-      })
+    
 
 
        
-    
