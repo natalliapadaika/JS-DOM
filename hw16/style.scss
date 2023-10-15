@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+form{
+    max-width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    input{
+        width: 65%;
+        margin-right: 10px;
+        border-radius: 4px;
+        outline: none;
+       
+      
+    }   
+
+    button{
+        width: 20%;
+        border-radius: 4px;
+     
+    }
+}
+#card-for-country{
+    margin: auto;
+    border: none;
+}
+#card-for-border{
+    gap: 10px;
+    max-width: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+   border: none;
+}
