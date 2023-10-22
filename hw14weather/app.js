@@ -5,7 +5,7 @@ const widget = document.querySelector('#widget'),
       forecasc = widget.querySelector('#forecasc');
 
 
-  current.insertAdjacentHTML('beforeend', '<p id="time"></p>');
+//   current.insertAdjacentHTML('beforeend', '<p id="time"></p>');
 const getNowTime = () =>{
     let now = new Date();
     let nowTime = now.toLocaleTimeString();
@@ -13,6 +13,7 @@ const getNowTime = () =>{
     current.querySelector('#time').textContent = `${nowTime}`;
     setTimeout (getNowTime, 1000);
 };
+
 getNowTime();
 
 const renderMain = (weatherKobrin) =>{
@@ -44,9 +45,9 @@ forecasc.insertAdjacentHTML('afterbegin', `<div class="row">
 
 let requestWeather = new XMLHttpRequest();
  
-requestWeather.open('Get', 'https://api.openweathermap.org/data/2.5/forecast?q=Kobrin&appid=bb05314415f48ba6bb5c9002c2029146&units=metric');
+// requestWeather.open('Get', 'https://api.openweathermap.org/data/2.5/forecast?q=Kobrin&appid=bb05314415f48ba6bb5c9002c2029146&units=metric');
  
-requestWeather.send();
+// requestWeather.send();
 
 requestWeather.onload = function () {
 const weatherKobrin = JSON.parse(requestWeather.response);
@@ -60,19 +61,19 @@ for (let i = 0; i <40; i+=8){
 };
 
 
-// ????? почему то координаты выдает не мои, а Барановичи, поэтому закомментировала и вернула как было....... ?????
 
 
-// navigator.geolocation.getCurrentPosition(
-//     function(position) {
+
+navigator.geolocation.getCurrentPosition(
+    function(position) {
 	    
-//      let latitude  = position.coords.latitude; 
-//      let longitude = position.coords.longitude;    
-//      console.log(latitude, longitude);    
-//       requestWeather.open('Get', `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=bb05314415f48ba6bb5c9002c2029146&units=metric`);
+     let latitude  = position.coords.latitude; 
+     let longitude = position.coords.longitude;    
+    //  console.log(latitude, longitude);    
+      requestWeather.open('Get', `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=bb05314415f48ba6bb5c9002c2029146&units=metric`);
  
-//      requestWeather.send();
+     requestWeather.send();
     
-// 	}
-// );
+	}
+);
 
