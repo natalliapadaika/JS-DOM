@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.for-form {
+  padding: 20px 20px;
+  background-color: aquamarine;
+}
+.for-form button {
+  background-color: rosybrown;
+  border-radius: 4px;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 10px;
+  height: 30px;
+}
+.for-form input {
+  height: 30px;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+
+.for-pl {
+  height: 65vh;
+  background-color: darkgray;
+  padding: 20px 20px;
+}
+
+.for-pr {
+  height: 25vh;
+  background-color: aquamarine;
+  padding: 20px 20px;
+}
+.for-pr img {
+  margin-right: 10px;
+}/*# sourceMappingURL=style.css.map */
