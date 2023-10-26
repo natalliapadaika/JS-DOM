@@ -1,0 +1,16 @@
+.container{
+    padding-top: 20px;
+    display: flex;
+    align-items: flex-start;
+ 
+}
+.list-group-item-action {
+    width: 70vh;
+
+    margin-right: 30px;
+   
+}
+.card-body{
+    display: none;
+}
+
