@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@500;600;700;800&family=Montserrat+Alternates:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 480px;
+  max-height: 100vh;
+  text-align: center;
+  background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+  font-family: "Montserrat Alternates", sans-serif;
+  color: beige;
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+}
+
+header {
+  margin-top: 20px;
+}
+header .weather {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: end;
+  min-height: 180px;
+  text-align: left;
+}
+header .weather i {
+  font-size: 44px;
+  margin-right: 11%;
+}
+header .weather .city {
+  width: 15%;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: beige;
+  background-color: transparent;
+}
+header .weather .temperature {
+  margin-right: 11%;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+.slider .img-slider {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+main {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: beige;
+}
+main .time-date {
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+main .time-date .time {
+  margin-bottom: 20px;
+  font-size: 58px;
+  font-weight: 600;
+}
+main .time-date .date {
+  font-size: 28px;
+  font-weight: 500;
+}
+main .greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+}
+main .greeting_name {
+  border: 0;
+  outline: 0;
+  font-size: 28px;
+  max-width: 35vh;
+  color: beige;
+  background-color: transparent;
+}
+
+.reload {
+  cursor: pointer;
+  width: 40px;
+  margin-bottom: 20px;
+}
+
+.for-qoutes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}/*# sourceMappingURL=style.css.map */
